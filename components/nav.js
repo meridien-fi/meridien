@@ -55,7 +55,7 @@ const NavItem = styled.li`
     height: 16px;
     width: 1px;
     transform: rotate(20deg);
-    background-color: var(--cool-grey-400);
+    background-color: var(--grey-400);
     right: 0;
     top: 25%;
   }
@@ -66,7 +66,7 @@ const NavLink = styled.a`
   display: inline-block;
   font-size: 1.6rem;
   padding: 0 0 0.25rem;
-  color: var(--cool-grey-600);
+  color: var(--grey-700);
   font-weight: 600;
   transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
 
@@ -78,14 +78,16 @@ const NavLink = styled.a`
     right: 0;
     top: 100%;
     height: 2px;
-    background: var(--light-blue-500);
+    background: var(--blue-500);
     transform: scaleX(var(--scale));
     transform-origin: var(--x) 50%;
     transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
   }
 
-  &:hover {
-    color: var(--light-blue-900);
+  &:hover,
+  &:focus {
+    outline: none;
+    color: var(--blue-800);
   }
 
   &:hover:after {
