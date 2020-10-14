@@ -3,7 +3,7 @@ import Nav from '../components/nav'
 
 const Header = () => (
   <Container>
-    <Brand>Brand</Brand>
+    <Brand>Meridien Consulting</Brand>
     <NavContainer>
       <Nav />
     </NavContainer>
@@ -11,16 +11,23 @@ const Header = () => (
 )
 
 const Brand = styled.div`
-  color: var(--grey-700);
-  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: var(--cool-grey-600);
+  font-weight: 600;
+  font-size: 2rem;
+
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    margin-bottom: 0;
+  }
 `
 
 const Container = styled.header`
   padding: 2rem 4rem;
-  border-bottom: 2px solid var(--grey-100);
+  background-color: var(--beige-100);
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
     display: flex;
+    padding: 2rem 8rem;
     align-items: center;
     max-width: 2000px;
   }
