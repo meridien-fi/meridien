@@ -1,4 +1,4 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -58,31 +58,52 @@ html {
 }
 
 ::selection {
-  background-color: var(--yellow);
-  color: var(--black);
+  background-color: var(--blue-700);
+  color: var(--white);
 }
 
 
 /* Global Vars */
 
 :root {
---black:     #0a0a0a;
---white:     #ffffff;
 
---grey-50:   #fafafa;
---grey-100:  #f5f5f5;
---grey-200:  #eeeeee;
---grey-300:  #e0e0e0;
---grey-400:  #bdbdbd;
---grey-500:  #9e9e9e;
---grey-600:  #757575;
---grey-700:  #616161;
---grey-800:  #424242;
---grey-900:  #212121;
+--black:  #0a0a0a;
+--white:  #ffffff;
 
---yellow:    #ffd034;
+/* Grey  */
+
+--grey-100:  #f7fafc;
+--grey-200:  #edf2f7;
+--grey-300:  #e2e8f0;
+--grey-400:  #cbd5e0;
+--grey-500:  #a0aec0;
+--grey-600:  #718096;
+--grey-700:  #4a5568;
+--grey-800:  #2d3748;
+--grey-900:  #1a202c;
+
+/* Blues  */
+
+--blue-50:   #E1F5FE;
+--blue-100:  #B3E5FC;
+--blue-200:  #81D4FA;
+--blue-300:  #4FC3F7;
+--blue-400:  #29B6F6;
+--blue-500:  #03A9F4;
+--blue-600:  #039BE5;
+--blue-700:  #0288D1;
+--blue-800:  #0277BD;
+--blue-900:  #01579B;
+
+/* Other */
+
+--orange-900: #e65100;
+--beige-100:  #fcfbf3;
+
+/* Fonts */
 
 --serif: 'Playfair Display', 'Georgia', 'Cambria';
+
 }
 
 body {
@@ -92,20 +113,21 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--grey-800);
 }
 
 a {
   text-decoration: none;
   transition: 0.3s;
 }
-`;
+`
 
 const theme = {
   screen: {
-    md: '700',
+    md: '800px',
     lg: '1200px',
   },
-};
+}
 
 export default function App({ Component, pageProps }) {
   return (
@@ -115,5 +137,5 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  );
+  )
 }
