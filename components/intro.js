@@ -14,11 +14,16 @@ const Intro = () => (
           </LineThree>
         </Title>
         <SubTitle>
-          Personalized Insights for <strong>Boards</strong>, <strong>CEOs</strong> and <strong>Top Talent</strong>
+          Personalized Insights for <strong>Boards</strong>,{' '}
+          <strong>CEOs</strong> and <strong>Top Talent</strong>
         </SubTitle>
       </IntroTitleWrap>
       <IntroImage>
-        <img src="/images/peter-stephenson-5.jpg" alt="Peter Stephenson" />
+        <picture>
+          <source srcSet="/images/peter-stephenson.webp" type="image/webp" />
+          <source srcset="img/peter-stephenson.jpg" type="image/jpeg" />
+          <img src="/images/peter-stephenson.jpg" alt="Peter Stephenson" />
+        </picture>
       </IntroImage>
     </Container>
   </Section>
@@ -54,8 +59,12 @@ const IntroTitleWrap = styled.div`
   }
 `
 const IntroImage = styled.div`
+  margin-right: -4rem;
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
+    margin-right: 0;
+
+    picture,
     img {
       object-fit: cover;
       height: 100%;
