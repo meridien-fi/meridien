@@ -77,7 +77,7 @@ const Title = styled.h1`
   font-weight: 100;
   line-height: 1;
   margin-bottom: 3rem;
-  color: var(--light-blue-A700);
+  color: var(--blue-700);
   font-family: var(--serif);
 
   span {
