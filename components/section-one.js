@@ -13,13 +13,13 @@ const SectionOne = () => (
 const Section = styled.section`
   padding: 10rem 2rem 4rem;
 
-  @media (min-width: 1200px) {
+  @media (min-width: ${props => props.theme.screen.lg}) {
     padding: 8rem 0 16rem 0;
   }
 `
 
 const Container = styled.div`
-  @media (min-width: 1200px) {
+  @media (min-width: ${props => props.theme.screen.lg}) {
     max-width: 2000px;
     padding-left: 12rem;
   }
@@ -33,7 +33,7 @@ const Title = styled.h1`
   color: var(--black);
 
 
-  @media (min-width: 1200px) {
+  @media (min-width: ${props => props.theme.screen.lg}) {
     font-size: 12rem;
     margin-bottom: 6rem;
   }
