@@ -12,7 +12,7 @@ const Header = () => (
 
 const Brand = styled.div`
   margin-bottom: 2rem;
-  color: var(--cool-grey-600);
+  color: var(--grey-600);
   font-weight: 600;
   font-size: 2rem;
 
@@ -29,7 +29,6 @@ const Container = styled.header`
     display: flex;
     padding: 2rem 8rem;
     align-items: center;
-    max-width: 2000px;
   }
 `
 
