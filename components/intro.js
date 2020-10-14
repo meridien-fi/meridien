@@ -3,19 +3,23 @@ import styled, { keyframes } from 'styled-components'
 const Intro = () => (
   <Section id="intro">
     <Container>
-      <Title>
-        <LineOne>
-          <span>This is</span>
-        </LineOne>
-        <LineTwo>just a</LineTwo>
-        <LineThree>
-          <span>Test</span>
-        </LineThree>
-      </Title>
-      <SubTitle>
-        More text <strong> text</strong>,
-        <strong>text</strong> and <strong> text</strong> and text.
-      </SubTitle>
+      <IntroTitleWrap>
+        <Title>
+          <LineOne>
+            <span>Strategic</span>
+          </LineOne>
+          <LineTwo>Leadership</LineTwo>
+          <LineThree>
+            <span>Advisory</span>
+          </LineThree>
+        </Title>
+        <SubTitle>
+          Personalized Insights for <strong>Boards</strong>, <strong>CEOs</strong> and <strong>Top Talent</strong>
+        </SubTitle>
+      </IntroTitleWrap>
+      <IntroImage>
+        <img src="/images/peter-stephenson-5.jpg" alt="Peter Stephenson" />
+      </IntroImage>
     </Container>
   </Section>
 )
@@ -28,39 +32,53 @@ const fadeUp = keyframes`
 `
 
 const Section = styled.section`
-  padding: 10rem 2rem 4rem;
+  background-color: var(--beige-100);
+  padding: 0 4rem;
 
-  @media (min-width: 1200px) {
-    padding: 8rem 0 16rem 0;
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    padding: 0 0 0 8rem;
   }
 `
 
 const Container = styled.div`
-  padding: 0 2rem;
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    display: grid;
+    grid-template-columns: minmax(20%, 50%) 1fr;
+  }
+`
+const IntroTitleWrap = styled.div`
+  padding: 4rem 0 2rem 0;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
-    padding: 0 12rem;
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    padding: 6rem 0 8rem 0;
+  }
+`
+const IntroImage = styled.div`
+
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
   }
 `
 
 const Title = styled.h1`
-  font-size: 10vw;
+  font-size: 6rem;
   font-weight: 100;
   line-height: 1;
   margin-bottom: 3rem;
-  color: var(--yellow);
-  /* color: ${props => props.theme.colors.primary}; */
-  /* font-family: ${props => props.theme.fontFamily.serif}; */
+  color: var(--light-blue-A700);
   font-family: var(--serif);
 
   span {
     font-weight: 700;
-    color: var(--black);
+    color: var(--cool-grey-700);
   }
 
-  @media (min-width: 1200px) {
-    font-size: 12rem;
+  @media (min-width: ${(props) => props.theme.screen.md}) {
     margin-bottom: 6rem;
+    font-size: 7.5vw;
   }
 `
 
@@ -83,22 +101,22 @@ const LineThree = styled.div`
 `
 
 const SubTitle = styled.div`
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.3;
   font-weight: 300;
-  color: #727272;
   opacity: 0;
   animation: ${fadeUp} 1s 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   transform: translateY(100px);
+  color: var(--cool-grey-600);
 
   strong {
-    color: var(--black);
+    white-space: nowrap;
+    font-weight: 700;
+    color: var(--cool-grey-700);
   }
 
-  @media (min-width: 1200px) {
-    font-size: 3.2rem;
-    max-width: 84rem;
-    color: #727272;
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    font-size: 3rem;
   }
 `
 
