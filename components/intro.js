@@ -21,7 +21,7 @@ const Intro = () => (
       <IntroImage>
         <picture>
           <source srcSet="/images/peter-stephenson.webp" type="image/webp" />
-          <source srcset="img/peter-stephenson.jpg" type="image/jpeg" />
+          <source srcSet="img/peter-stephenson.jpg" type="image/jpeg" />
           <img src="/images/peter-stephenson.jpg" alt="Peter Stephenson" />
         </picture>
       </IntroImage>
@@ -82,7 +82,7 @@ const Title = styled.h1`
 
   span {
     font-weight: 700;
-    color: var(--cool-grey-700);
+    color: var(--grey-700);
   }
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
@@ -116,12 +116,12 @@ const SubTitle = styled.div`
   opacity: 0;
   animation: ${fadeUp} 1s 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   transform: translateY(100px);
-  color: var(--cool-grey-600);
+  color: var(--grey-600);
 
   strong {
     white-space: nowrap;
     font-weight: 700;
-    color: var(--cool-grey-700);
+    color: var(--grey-700);
   }
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
