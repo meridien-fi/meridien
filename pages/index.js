@@ -5,6 +5,9 @@ import Footer from '../components/footer';
 import SubIntro from'../components/subIntro'
 import Boards from'../components/boards'
 import Ceos from'../components/ceos'
+import TopTalent from'../components/topTalent'
+import About from'../components/about'
+import Contact from'../components/contact'
 
 export default function Home() {
   return (
@@ -19,6 +22,9 @@ export default function Home() {
         <SubIntro />
         <Boards />
         <Ceos />
+        <TopTalent />
+        <About />
+        <Contact />
       </main>
       <Footer />
     </>
