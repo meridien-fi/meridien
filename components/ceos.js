@@ -92,7 +92,6 @@ const Ceos = () => (
 )
 
 const Section = styled.section`
-  padding-bottom: 10rem;
   border-bottom: 2px solid var(--grey-200);
 `
 
@@ -153,7 +152,6 @@ const Description = styled.div`
 
 const ProcessWrap = styled.div`
   padding: 0 2rem;
-  border-bottom: 2px solid var(--grey-200);
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     padding: 0 4rem;
@@ -175,7 +173,7 @@ const ProcessTitle = styled.h3`
   color: var(--grey-600);
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 1;
     grid-row: 1 / span 1;
     margin-bottom: 10rem;
     font-size: 6rem;
