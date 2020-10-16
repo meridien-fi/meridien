@@ -5,13 +5,9 @@ const Intro = () => (
     <Container>
       <TitleWrap>
         <Title>
-          <LineOne>
-            Strategic
-          </LineOne>
+          <LineOne>Strategic</LineOne>
           <LineTwo>Leadership</LineTwo>
-          <LineThree>
-            Advisory
-          </LineThree>
+          <LineThree>Advisory</LineThree>
         </Title>
         <SubTitle>
           Personalized Insights for <strong>Boards</strong>,{' '}

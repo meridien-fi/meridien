@@ -12,7 +12,7 @@ const Container = styled.footer`
   font-size: 1.4rem;
   color: var(--grey-600);
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 2rem 8rem;
     max-width: 2000px;
   }
