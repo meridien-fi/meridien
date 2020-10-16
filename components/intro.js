@@ -3,28 +3,28 @@ import styled, { keyframes } from 'styled-components'
 const Intro = () => (
   <Section id="intro">
     <Container>
-      <IntroTitleWrap>
+      <TitleWrap>
         <Title>
           <LineOne>
-            <span>Strategic</span>
+            Strategic
           </LineOne>
           <LineTwo>Leadership</LineTwo>
           <LineThree>
-            <span>Advisory</span>
+            Advisory
           </LineThree>
         </Title>
         <SubTitle>
           Personalized Insights for <strong>Boards</strong>,{' '}
           <strong>CEOs</strong> and <strong>Top Talent</strong>
         </SubTitle>
-      </IntroTitleWrap>
-      <IntroImage>
+      </TitleWrap>
+      <Image>
         <picture>
           <source srcSet="/images/peter-stephenson.webp" type="image/webp" />
           <source srcSet="img/peter-stephenson.jpg" type="image/jpeg" />
           <img src="/images/peter-stephenson.jpg" alt="Peter Stephenson" />
         </picture>
-      </IntroImage>
+      </Image>
     </Container>
   </Section>
 )
@@ -38,7 +38,11 @@ const fadeUp = keyframes`
 
 const Section = styled.section`
   background-color: var(--beige-100);
-  padding: 0 4rem;
+  padding: 0 2rem;
+
+  @media (min-width: ${(props) => props.theme.screen.md}) {
+    padding: 0 0 0 4rem;
+  }
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 0 0 0 8rem;
@@ -46,44 +50,24 @@ const Section = styled.section`
 `
 
 const Container = styled.div`
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.md}) {
     display: grid;
-    grid-template-columns: minmax(20%, 50%) 1fr;
+    grid-template-columns: minmax(30%, 40%) minmax(40%, 60%);
   }
 `
-const IntroTitleWrap = styled.div`
-  padding: 4rem 0 2rem 0;
+const TitleWrap = styled.div`
+  padding: 1rem 0 0 0;
 
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.md}) {
     padding: 6rem 0 8rem 0;
   }
 `
-const IntroImage = styled.div`
-  margin-right: -4rem;
-
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
-    margin-right: 0;
-
-    picture,
-    img {
-      object-fit: cover;
-      height: 100%;
-    }
-  }
-`
-
 const Title = styled.h1`
-  font-size: 6rem;
-  font-weight: 100;
-  line-height: 1;
   margin-bottom: 3rem;
-  color: var(--blue-700);
+  font-size: 6rem;
+  line-height: 1;
   font-family: var(--serif);
-
-  span {
-    font-weight: 700;
-    color: var(--grey-700);
-  }
+  font-weight: 600;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     margin-bottom: 6rem;
@@ -98,6 +82,7 @@ const LineOne = styled.div`
 `
 
 const LineTwo = styled.div`
+  color: var(--blue-700);
   opacity: 0;
   transform: translateY(100px);
   animation: ${fadeUp} 1s 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
@@ -110,22 +95,28 @@ const LineThree = styled.div`
 `
 
 const SubTitle = styled.div`
-  font-size: 2rem;
+  font-size: 2.4rem;
   line-height: 1.3;
-  font-weight: 300;
   opacity: 0;
   animation: ${fadeUp} 1s 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   transform: translateY(100px);
-  color: var(--grey-600);
-
-  strong {
-    white-space: nowrap;
-    font-weight: 700;
-    color: var(--grey-700);
-  }
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
     font-size: 3rem;
+  }
+
+  strong {
+    white-space: nowrap;
+  }
+`
+
+const Image = styled.div`
+  @media (min-width: ${(props) => props.theme.screen.md}) {
+    picture,
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
   }
 `
 
