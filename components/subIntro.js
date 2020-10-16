@@ -8,9 +8,10 @@ const SubIntro = () => (
         <SubTitle>A process-driven strategy with actionable outcomes</SubTitle>
       </TitleWrap>
       <Description>
-        <strong>Dr. Peter Stephenson</strong> applies a collaborative,
-        results-focused lens to help your organization reach its near and
-        long-term goals.
+        <strong>Dr. Peter Stephenson</strong>
+        <br />
+        applies a collaborative, results-focused lens to help your organization
+        reach its near and long-term goals.
       </Description>
     </Container>
   </Section>
@@ -18,22 +19,22 @@ const SubIntro = () => (
 
 const Section = styled.section`
   background-color: var(--grey-200);
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    padding: 8rem 4rem;
+    padding: 12rem 4rem;
   }
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
-    padding: 12rem 8rem;
+    padding: 16rem 8rem;
   }
 `
 
 const Container = styled.div`
   @media (min-width: ${(props) => props.theme.screen.md}) {
     display: grid;
-    grid-gap: 4rem;
-    grid-template-columns: minmax(30%, 55%) 1fr;
+    grid-gap: 6rem;
+    grid-template-columns: minmax(30%, 60%) 1fr;
   }
 `
 
@@ -53,8 +54,7 @@ const Title = styled.h2`
   font-weight: 600;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    margin-bottom: 6rem;
-    font-size: 6vw;
+    font-size: 6rem;
   }
 `
 
@@ -68,7 +68,11 @@ const SubTitle = styled.div`
 `
 
 const Description = styled.div`
-  font-size: 2.2rem;
+  font-size: 2.4rem;
+
+  strong {
+    font-family: var(--serif);
+  }
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     font-size: 2.4rem;
