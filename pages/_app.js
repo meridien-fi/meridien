@@ -26,7 +26,6 @@ ul,
 blockquote {
   margin: 0;
   padding: 0;
-  font-weight: normal;
 }
 
 img {
@@ -97,7 +96,11 @@ html {
 
 /* Other */
 
+--orange-600: #FB8C00;
+--orange-700: #F57C00;
+--orange-800: #EF6C00;
 --orange-900: #e65100;
+
 --beige-100:  #fcfbf3;
 
 /* Fonts */
@@ -109,11 +112,12 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.5;
+  font-weight: 300;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--grey-800);
+  color: var(--grey-700);
 }
 
 a {
