@@ -4,27 +4,27 @@ import styled from 'styled-components'
 const Nav = () => (
   <NavItems>
     <NavItem>
-      <Link href="#one" passHref>
+      <Link href="#boards" passHref>
         <NavLink>Boards</NavLink>
       </Link>
     </NavItem>
     <NavItem>
-      <Link href="#two" passHref>
+      <Link href="#ceos" passHref>
         <NavLink>CEOs</NavLink>
       </Link>
     </NavItem>
     <NavItem>
-      <Link href="#two" passHref>
+      <Link href="#topTalent" passHref>
         <NavLink>Top Talent</NavLink>
       </Link>
     </NavItem>
     <NavItem>
-      <Link href="#two" passHref>
+      <Link href="#about" passHref>
         <NavLink>About</NavLink>
       </Link>
     </NavItem>
     <NavItem>
-      <Link href="#two" passHref>
+      <Link href="#contact" passHref>
         <NavLink>Contact</NavLink>
       </Link>
     </NavItem>
@@ -67,7 +67,7 @@ const NavLink = styled.a`
   font-size: 1.6rem;
   padding: 0 0 0.25rem;
   color: var(--grey-700);
-  font-weight: 600;
+  font-weight: 400;
   transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
 
   &:after {
