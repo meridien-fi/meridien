@@ -136,10 +136,11 @@ const Title = styled.h2`
 `
 
 const SubTitle = styled.div`
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   font-size: 2.4rem;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
+    margin-bottom: 4rem;
     font-size: 3rem;
   }
 `
@@ -194,7 +195,7 @@ const Process = styled.div`
 
 const ProcessItem = styled.div`
   position: relative;
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 4rem 4rem 0;
 
   &:before {
     position: absolute;
@@ -224,7 +225,7 @@ const ProcessItem = styled.div`
   }
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
-    padding: 2rem 0 10rem 0;
+    padding: 2rem 4rem 10rem 0;
   }
 `
 
@@ -259,7 +260,7 @@ const ProcessItemPoint = styled.li`
 
 const ProcessSummary = styled.div`
   position: relative;
-  padding: 4rem 0;
+  padding: 0 0 4rem;
   font-size: 2rem;
   line-height: 1.75;
   font-family: var(--serif);
