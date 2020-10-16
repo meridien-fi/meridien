@@ -14,7 +14,7 @@ const Nav = () => (
       </Link>
     </NavItem>
     <NavItem>
-      <Link href="#topTalent" passHref>
+      <Link href="#top-talent" passHref>
         <NavLink>Top Talent</NavLink>
       </Link>
     </NavItem>
