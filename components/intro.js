@@ -17,8 +17,12 @@ const Intro = () => (
       <Image>
         <picture>
           <source srcSet="/images/peter-stephenson.webp" type="image/webp" />
-          <source srcSet="img/peter-stephenson.jpg" type="image/jpeg" />
-          <img src="/images/peter-stephenson.jpg" width="900" height="573" alt="Peter Stephenson" />
+          <img
+            src="/images/peter-stephenson.jpg"
+            width="900"
+            height="573"
+            alt="Peter Stephenson"
+          />
         </picture>
       </Image>
     </Container>
@@ -29,6 +33,16 @@ const fadeUp = keyframes`
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+`
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 `
 
@@ -107,6 +121,8 @@ const SubTitle = styled.div`
 `
 
 const Image = styled.div`
+  animation: ${fadeIn} 2s;
+
   @media (min-width: ${(props) => props.theme.screen.md}) {
     picture,
     img {
