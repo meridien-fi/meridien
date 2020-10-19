@@ -69,19 +69,10 @@ const About = () => (
         </p>
       </AboutSummary>
     </AboutWrap>
-
-    <Blockquote>
-      <p>
-        "High performing talent is every organization’s most critical
-        competitive advantage."
-      </p>
-    </Blockquote>
   </Section>
 )
 
-const Section = styled.section`
-  border-bottom: 1px solid var(--grey-300);
-`
+const Section = styled.section``
 
 const SectionIntro = styled.div`
   padding: 4rem 2rem;
@@ -137,7 +128,7 @@ const Description = styled.div`
     font-size: 2.4rem;
   }
 
-  p {
+  p:not(:last-child) {
     margin-bottom: 2rem;
   }
 `
@@ -223,29 +214,6 @@ const AboutSummary = styled.div`
       width: 6rem;
       height: 4px;
       background-color: var(--blue-500);
-    }
-  }
-`
-
-const Blockquote = styled.blockquote`
-  background-color: var(--grey-200);
-  padding: 8rem 4rem;
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    padding: 10rem 8rem;
-  }
-
-  p {
-    font-size: 4rem;
-    line-height: 1.25;
-    font-family: var(--serif);
-    font-weight: 400;
-    font-style: italic;
-    color: var(--grey-600);
-
-    @media (min-width: ${(props) => props.theme.screen.lg}) {
-      max-width: 80%;
-      font-size: 6rem;
     }
   }
 `
