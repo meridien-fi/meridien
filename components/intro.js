@@ -5,8 +5,8 @@ const Intro = () => (
     <Container>
       <TitleWrap>
         <Title>
-          <LineOne>Strategic</LineOne>
-          <LineTwo>Leadership</LineTwo>
+          <LineOne>Strategic </LineOne>
+          <LineTwo>Leadership </LineTwo>
           <LineThree>Advisory</LineThree>
         </Title>
         <SubTitle>
@@ -37,11 +37,7 @@ const fadeUp = keyframes`
 `
 
 const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
+  100% {
     opacity: 1;
   }
 `
@@ -62,7 +58,7 @@ const Section = styled.section`
 const Container = styled.div`
   @media (min-width: ${(props) => props.theme.screen.md}) {
     display: grid;
-    grid-template-columns: minmax(30%, 40%) minmax(40%, 60%);
+    grid-template-columns: minmax(30%, 42%) minmax(40%, 58%);
   }
 `
 const TitleWrap = styled.div`
@@ -81,24 +77,28 @@ const Title = styled.h1`
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     margin-bottom: 6rem;
+    font-size: 8rem;
+  }
+
+  @media (min-width: ${(props) => props.theme.screen.md}) {
     font-size: 7.5vw;
   }
 `
 
-const LineOne = styled.div`
+const LineOne = styled.span`
   opacity: 0;
   transform: translateY(100px);
   animation: ${fadeUp} 1s 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
 `
 
-const LineTwo = styled.div`
+const LineTwo = styled.span`
   color: var(--blue-700);
   opacity: 0;
   transform: translateY(100px);
   animation: ${fadeUp} 1s 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
 `
 
-const LineThree = styled.div`
+const LineThree = styled.span`
   opacity: 0;
   transform: translateY(100px);
   animation: ${fadeUp} 1s 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
@@ -121,7 +121,8 @@ const SubTitle = styled.div`
 `
 
 const Image = styled.div`
-  animation: ${fadeIn} 2s;
+  opacity: 0;
+  animation: ${fadeIn} 2s forwards;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     picture,
