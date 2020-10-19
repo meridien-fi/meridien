@@ -44,6 +44,7 @@ const QuoteText = styled.blockquote`
   }
 
   cite {
+    margin-right: 1rem;
     font-style: normal;
     font-size: 2rem;
   }
