@@ -8,10 +8,11 @@ const SubIntro = () => (
         <SubTitle>A process-driven strategy with actionable outcomes</SubTitle>
       </TitleWrap>
       <Description>
-        <strong>Dr. Peter Stephenson</strong>
-        <br />
-        applies a collaborative, results-focused lens to help your organization
-        reach its near and long-term goals.
+        <p>
+          <strong>Dr. Peter Stephenson</strong>
+          applies a collaborative, results-focused lens to help your
+          organization reach its near and long-term goals.
+        </p>
       </Description>
     </Container>
   </Section>
@@ -26,7 +27,7 @@ const Section = styled.section`
   }
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
-    padding: 16rem 8rem;
+    padding: 14rem 8rem;
   }
 `
 
@@ -70,7 +71,13 @@ const SubTitle = styled.div`
 const Description = styled.div`
   font-size: 2.4rem;
 
+  p {
+    margin-bottom: 3rem;
+  }
+
   strong {
+    display: block;
+    margin-bottom: 1rem;
     font-family: var(--serif);
   }
 
