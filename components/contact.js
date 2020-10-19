@@ -184,6 +184,10 @@ const Image = styled.div`
   picture {
     border-bottom: 4px solid var(--blue-500);
   }
+
+  @media (min-width: ${(props) => props.theme.screen.md}) {
+    padding-top: 3rem;
+  }
 `
 
 export default Contact
