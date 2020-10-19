@@ -71,14 +71,16 @@ const About = () => (
     </AboutWrap>
 
     <Blockquote>
-      "High performing talent is every organization’s most critical competitive
-      advantage."
+      <p>
+        "High performing talent is every organization’s most critical
+        competitive advantage."
+      </p>
     </Blockquote>
   </Section>
 )
 
 const Section = styled.section`
-  border-bottom: 2px solid var(--grey-200);
+  border-bottom: 2px solid var(--grey-300);
 `
 
 const SectionIntro = styled.div`
@@ -89,7 +91,7 @@ const SectionIntro = styled.div`
   }
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
-    padding: 10rem 8rem;
+    padding: 8rem;
   }
 `
 
@@ -103,7 +105,7 @@ const Title = styled.h2`
   font-weight: 600;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    font-size: 9rem;
+    font-size: 8rem;
   }
 
   &:after {
@@ -128,10 +130,10 @@ const SubTitle = styled.div`
 `
 
 const Description = styled.div`
-  font-size: 1.8rem;
+  font-size: 2rem;
 
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    max-width: 60%;
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    max-width: 80%;
     font-size: 2.4rem;
   }
 
@@ -150,22 +152,19 @@ const AboutWrap = styled.div`
   @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 0 8rem;
     display: grid;
-    grid-column-gap: 6rem;
-    grid-template-columns: minmax(30%, 60%) 1fr;
+    grid-template-columns: minmax(30%, 64%) 1fr;
   }
 `
 
 const AboutTitle = styled.h3`
-  margin-bottom: 4rem;
-  text-transform: uppercase;
-  font-family: var(--serif);
-  font-size: 2rem;
-  color: var(--grey-500);
+  margin-bottom: 6rem;
+  font-size: 3.6rem;
+  line-height: 1;
+  color: var(--grey-600);
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
-    font-size: 3rem;
   }
 `
 
@@ -188,14 +187,14 @@ const AboutItem = styled.div`
 `
 
 const AboutItemTitle = styled.h4`
-  margin-bottom: 2rem;
-  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  font-size: 2.4rem;
   line-height: 1;
   font-family: var(--serif);
   color: var(--grey-600);
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 `
 
@@ -208,13 +207,13 @@ const AboutSummary = styled.div`
   color: var(--grey-700);
 
   p {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-column: 2 / span 1;
-    padding: 6rem;
-    border-left: 2px solid var(--grey-200);
+    padding: 6rem 4rem 6rem 6rem;
+    border-left: 2px solid var(--grey-300);
 
     &:before {
       content: '';
@@ -230,17 +229,24 @@ const AboutSummary = styled.div`
 
 const Blockquote = styled.blockquote`
   background-color: var(--grey-200);
-  padding: 8rem 2rem;
-  font-size: 4rem;
-  line-height: 1.25;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--grey-600);
+  padding: 8rem 4rem;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    padding: 8rem 24rem;
-    font-size: 6rem;
+    padding: 10rem 8rem;
+  }
+
+  p {
+    font-size: 4rem;
+    line-height: 1.25;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--grey-600);
+
+    @media (min-width: ${(props) => props.theme.screen.lg}) {
+      max-width: 80%;
+      font-size: 6rem;
+    }
   }
 `
 
