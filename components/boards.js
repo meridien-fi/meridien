@@ -209,20 +209,14 @@ const Process = styled.div`
 
 const ProcessItem = styled.div`
   position: relative;
-  padding: 6rem 10rem 6rem 0;
+  padding: 6rem 4rem 6rem 0;
   border-bottom: 1px solid var(--grey-300);
-
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
-    &:last-child {
-      border-bottom: none;
-    }
-  }
 
   &:before {
     position: absolute;
-    right: 2rem;
+    right: 0;
     top: 2rem;
-    font-size: 14rem;
+    font-size: 10rem;
     font-weight: 400;
     line-height: 120px;
     font-family: var(--serif);
@@ -243,6 +237,21 @@ const ProcessItem = styled.div`
 
   &:nth-child(4):before {
     content: '4.';
+  }
+
+  @media (min-width: ${(props) => props.theme.screen.md}) {
+    padding: 6rem 10rem 6rem 0;
+
+    &:before {
+      right: 2rem;
+      font-size: 14rem;
+    }
+  }
+
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    &:last-child {
+      border-bottom: none;
+    }
   }
 `
 
