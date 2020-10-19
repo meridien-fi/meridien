@@ -64,8 +64,8 @@ const NavItem = styled.li`
 const NavLink = styled.a`
   position: relative;
   display: inline-block;
-  font-size: 1.6rem;
-  padding: 0 0 0.25rem;
+  font-size: 1.8rem;
+  padding: 0.5rem;
   color: var(--grey-700);
   font-weight: 400;
   transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
@@ -77,7 +77,7 @@ const NavLink = styled.a`
     left: 0;
     right: 0;
     top: 100%;
-    height: 2px;
+    height: 1px;
     background: var(--blue-500);
     transform: scaleX(var(--scale));
     transform-origin: var(--x) 50%;
@@ -94,8 +94,8 @@ const NavLink = styled.a`
     --scale: 1;
   }
 
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
-    font-size: 1.8rem;
+  @media (min-width: ${(props) => props.theme.screen.md}) {
+    padding: 0 0 0.25rem;
   }
 `
 
