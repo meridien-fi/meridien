@@ -80,7 +80,7 @@ const About = () => (
 )
 
 const Section = styled.section`
-  border-bottom: 2px solid var(--grey-300);
+  border-bottom: 1px solid var(--grey-300);
 `
 
 const SectionIntro = styled.div`
@@ -213,7 +213,7 @@ const AboutSummary = styled.div`
   @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-column: 2 / span 1;
     padding: 6rem 4rem 6rem 6rem;
-    border-left: 2px solid var(--grey-300);
+    border-left: 1px solid var(--grey-300);
 
     &:before {
       content: '';
