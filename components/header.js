@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Nav from '../components/nav'
 
 const Header = () => (
-  <Container>
+  <Container id="top">
     <Brand>Meridien Consulting</Brand>
     <NavContainer>
       <Nav />
@@ -13,8 +13,8 @@ const Header = () => (
 const Brand = styled.div`
   margin-bottom: 2rem;
   color: var(--grey-700);
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: 500;
+  font-size: 2.2rem;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     margin-bottom: 0;
