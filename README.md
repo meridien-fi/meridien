@@ -2,4 +2,4 @@
 
 ---
 
-[link](https://meridien.vercel.app)
+[meridien.vercel.app](https://meridien.vercel.app)
