@@ -59,9 +59,12 @@ const About = () => (
         <p>
           Peter is frequently invited to speak on issues ranging from board
           governance and executive development to implementing strategy and
-          planning succession. He holds a master’s and PhD in applied psychology
-          from the University of Toronto and is faculty member at the Institute
-          of Corporate Directors - Director’s Education Program.
+          planning succession.
+        </p>
+        <p>
+          He holds a master’s and PhD in applied psychology from the University
+          of Toronto and is faculty member at the Institute of Corporate
+          Directors - Director’s Education Program.
         </p>
         <p>
           Peter launched Meridien Consulting in 1997 after 14 years helping grow
