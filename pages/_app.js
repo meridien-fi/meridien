@@ -26,6 +26,7 @@ ul,
 blockquote {
   margin: 0;
   padding: 0;
+  font-weight: 300;
 }
 
 img {

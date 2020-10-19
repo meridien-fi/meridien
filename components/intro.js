@@ -10,7 +10,7 @@ const Intro = () => (
           <LineThree>Advisory</LineThree>
         </Title>
         <SubTitle>
-          Personalized Insights for <strong>Boards</strong>,{' '}
+          Personalized Insights for <strong>Boards</strong>,
           <strong>CEOs</strong> and <strong>Top Talent</strong>
         </SubTitle>
       </TitleWrap>
@@ -18,7 +18,7 @@ const Intro = () => (
         <picture>
           <source srcSet="/images/peter-stephenson.webp" type="image/webp" />
           <source srcSet="img/peter-stephenson.jpg" type="image/jpeg" />
-          <img src="/images/peter-stephenson.jpg" alt="Peter Stephenson" />
+          <img src="/images/peter-stephenson.jpg" width="900" height="573" alt="Peter Stephenson" />
         </picture>
       </Image>
     </Container>
