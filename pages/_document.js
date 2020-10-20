@@ -34,7 +34,9 @@ export default class CustomDocument extends Document {
       <Html lang='en'>
         <Head>
           <link rel='icon' href='/images/favicon.svg' />
-          <link href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap' rel='stylesheet' />
+          <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+          <link rel='preload' as='style' href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap' />
+          <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap' />
         </Head>
         <body>
           <Main />
