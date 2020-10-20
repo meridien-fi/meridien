@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import SectionTitle from '../components/sectionTitle'
 import SectionSubTitle from '../components/sectionSubTitle'
 
-
 const Boards = () => (
   <Section id="boards">
     <SectionIntro>

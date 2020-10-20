@@ -7,7 +7,9 @@ const Ceos = () => (
     <SectionIntro>
       <SectionTitle>CEOs</SectionTitle>
 
-      <SectionSubTitle>Selecting and Developing High-Performing Leaders</SectionSubTitle>
+      <SectionSubTitle>
+        Selecting and Developing High-Performing Leaders
+      </SectionSubTitle>
       <Description>
         Effective officers – who learn, unlearn, adapt and stay flexible – guide
         forward-looking companies and empower staff to consistently meet and
