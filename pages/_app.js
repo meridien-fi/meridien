@@ -103,6 +103,7 @@ html {
 }
 
 body {
+  padding-top: 65px;
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 300;

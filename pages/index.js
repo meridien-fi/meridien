@@ -22,7 +22,7 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <main>
+      <main id="top">
         <Intro />
         <SubIntro />
         <Boards />

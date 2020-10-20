@@ -7,7 +7,9 @@ const TopTalent = () => (
     <SectionIntro>
       <SectionTitle>Top Talent</SectionTitle>
 
-      <SectionSubTitle>Aligning the Best People at the Right Time</SectionSubTitle>
+      <SectionSubTitle>
+        Aligning the Best People at the Right Time
+      </SectionSubTitle>
       <Description>
         Attracting and developing high performers – your competitive advantage –
         takes planning, coaching and a proven process.
