@@ -34,6 +34,21 @@ export default class CustomDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/images/favicon.svg" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+            as="style"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+            rel="stylesheet"
+            onLoad="this.media='all'"
+          />
         </Head>
         <body>
           <Main />
