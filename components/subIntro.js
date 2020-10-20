@@ -82,7 +82,7 @@ const Description = styled.div`
     white-space: nowrap;
     padding: 0 0 0.25rem;
     font-weight: 400;
-    color: var(--blue-800);
+    color: var(--blue-900);
     transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
 
     &:after {
@@ -93,7 +93,7 @@ const Description = styled.div`
       right: 0;
       top: 100%;
       height: 1px;
-      background: var(--blue-600);
+      background: var(--blue-700);
       transform: scaleX(var(--scale));
       transform-origin: var(--x) 50%;
       transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);

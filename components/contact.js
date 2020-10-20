@@ -7,7 +7,7 @@ const Contact = () => (
         <Title>Contact</Title>
 
         <SubTitle>
-          <strong>Dr. Peter Stephenson</strong>
+          Dr. Peter Stephenson
         </SubTitle>
 
         <ContactDetails>
@@ -107,9 +107,11 @@ const Title = styled.h2`
 const SubTitle = styled.div`
   margin-bottom: 2rem;
   font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--grey-600);
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
     font-size: 3rem;
   }
 `
@@ -140,8 +142,6 @@ const ContactDetails = styled.div`
 const Phone = styled.div`
   margin-bottom: 3rem;
   font-size: 2.4rem;
-  line-height: 1;
-  color: var(--grey-600);
 
   svg {
     width: 32px;
@@ -156,7 +156,6 @@ const Phone = styled.div`
 const Email = styled.div`
   margin-bottom: 2rem;
   font-size: 2.4rem;
-  line-height: 1;
 
   svg {
     width: 32px;
@@ -168,7 +167,7 @@ const Email = styled.div`
   }
 
   a {
-    color: var(--grey-600);
+    color: var(--grey-700);
 
     &:hover {
       color: var(--blue-700);
