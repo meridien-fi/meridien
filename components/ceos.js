@@ -1,11 +1,13 @@
 import styled from 'styled-components'
+import SectionTitle from '../components/sectionTitle'
+import SectionSubTitle from '../components/sectionSubTitle'
 
 const Ceos = () => (
   <Section id="ceos">
     <SectionIntro>
-      <Title>CEOs</Title>
+      <SectionTitle>CEOs</SectionTitle>
 
-      <SubTitle>Selecting and Developing High-Performing Leaders</SubTitle>
+      <SectionSubTitle>Selecting and Developing High-Performing Leaders</SectionSubTitle>
       <Description>
         Effective officers – who learn, unlearn, adapt and stay flexible – guide
         forward-looking companies and empower staff to consistently meet and
@@ -114,40 +116,6 @@ const SectionIntro = styled.div`
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 8rem;
-  }
-`
-
-const Title = styled.h2`
-  position: relative;
-  padding-bottom: 2rem;
-  margin-bottom: 4rem;
-  font-size: 6rem;
-  line-height: 1;
-  font-family: var(--serif);
-  font-weight: 600;
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    font-size: 8rem;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 6rem;
-    height: 4px;
-    background-color: var(--blue-500);
-  }
-`
-
-const SubTitle = styled.div`
-  margin-bottom: 2rem;
-  font-size: 2.4rem;
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    margin-bottom: 4rem;
-    font-size: 3rem;
   }
 `
 

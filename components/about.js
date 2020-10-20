@@ -1,13 +1,15 @@
 import styled from 'styled-components'
+import SectionTitle from '../components/sectionTitle'
+import SectionSubTitle from '../components/sectionSubTitle'
 
 const About = () => (
   <Section id="about">
     <SectionIntro>
-      <Title>About</Title>
+      <SectionTitle>About</SectionTitle>
 
-      <SubTitle>
+      <SectionSubTitle>
         <strong>Dr. Peter Stephenson</strong> – President and Founder
-      </SubTitle>
+      </SectionSubTitle>
       <Description>
         <p>
           Peter has helped build leaders at organizations across a wide range of
@@ -86,40 +88,6 @@ const SectionIntro = styled.div`
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 8rem;
-  }
-`
-
-const Title = styled.h2`
-  position: relative;
-  padding-bottom: 2rem;
-  margin-bottom: 4rem;
-  font-size: 6rem;
-  line-height: 1;
-  font-family: var(--serif);
-  font-weight: 600;
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    font-size: 8rem;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 6rem;
-    height: 4px;
-    background-color: var(--blue-500);
-  }
-`
-
-const SubTitle = styled.div`
-  margin-bottom: 2rem;
-  font-size: 2.4rem;
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    margin-bottom: 4rem;
-    font-size: 3rem;
   }
 `
 
