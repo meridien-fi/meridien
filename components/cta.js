@@ -49,7 +49,6 @@ const SubTitle = styled.div`
 
 const Dash = styled.span`
   display: inline-block;
-  position: relative;
   width: 6rem;
   height: 1px;
   background-color: var(--blue-500);
