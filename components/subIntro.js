@@ -1,46 +1,45 @@
 import styled from 'styled-components'
 
 const SubIntro = () => (
-  <Section id="subintro">
-    <Container>
-      <TitleWrap>
-        <Title>The Meridien Approach</Title>
-        <SubTitle>A process-driven strategy with actionable outcomes</SubTitle>
-      </TitleWrap>
-      <Description>
-        <p>
-          <strong>Dr. Peter Stephenson</strong>
-          applies a collaborative, results-focused lens to help your
-          organization reach its near and long-term goals.
-        </p>
-      </Description>
-    </Container>
+  <Section>
+    <TitleWrap>
+      <Title>The Meridien Approach</Title>
+      <SubTitle>
+        A process-driven strategy with actionable outcomes. Dr. Peter Stephenson
+        applies a collaborative, results-focused lens to help your organization
+        reach its near and long-term goals.
+      </SubTitle>
+    </TitleWrap>
+    <Description>
+      <Dash />
+      <p>
+        <strong>Dr. Peter Stephenson</strong> joins{' '}
+        <a href="https://www.hugessen.com">Hugessen Consulting</a> to boost CEO
+        leadership performance and help Boards raise their performance bar.
+      </p>
+    </Description>
   </Section>
 )
 
 const Section = styled.section`
-  background-color: var(--grey-200);
   padding: 6rem 2rem;
+  background-color: var(--grey-200);
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    padding: 12rem 4rem;
+    display: grid;
+    grid-template-columns: minmax(40%, 60%) minmax(30%, 40%);
+    grid-column-gap: 10rem;
+    padding: 8rem 4rem;
+    align-items: center;
   }
 
   @media (min-width: ${(props) => props.theme.screen.lg}) {
-    padding: 14rem 8rem;
-  }
-`
-
-const Container = styled.div`
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    display: grid;
-    grid-gap: 6rem;
-    grid-template-columns: minmax(30%, 60%) 1fr;
+    padding: 12rem 8rem;
   }
 `
 
 const TitleWrap = styled.div`
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     margin-bottom: 0;
@@ -55,35 +54,69 @@ const Title = styled.h2`
   font-weight: 600;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 `
 
 const SubTitle = styled.div`
-  font-size: 2.4rem;
-  line-height: 1.3;
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    font-size: 3rem;
-  }
-`
-
-const Description = styled.div`
-  font-size: 2.4rem;
-
-  p {
-    margin-bottom: 3rem;
-  }
-
-  strong {
-    display: block;
-    margin-bottom: 1rem;
-    font-family: var(--serif);
-  }
+  font-size: 2rem;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     font-size: 2.4rem;
   }
+`
+
+const Description = styled.div`
+  font-size: 2rem;
+
+  @media (min-width: ${(props) => props.theme.screen.md}) {
+    font-size: 2.2rem;
+  }
+
+  strong {
+    font-weight: 400;
+  }
+
+  a {
+    position: relative;
+    white-space: nowrap;
+    padding: 0 0 0.25rem;
+    font-weight: 400;
+    color: var(--blue-800);
+    transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
+
+    &:after {
+      --scale: 0;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      height: 1px;
+      background: var(--blue-600);
+      transform: scaleX(var(--scale));
+      transform-origin: var(--x) 50%;
+      transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: var(--blue-700);
+    }
+
+    &:hover:after {
+      --scale: 1;
+    }
+  }
+`
+
+const Dash = styled.span`
+  display: inline-block;
+  margin-bottom: 2rem;
+  width: 6rem;
+  height: 4px;
+  background-color: var(--blue-500);
 `
 
 export default SubIntro
