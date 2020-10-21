@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 import SectionTitle from '../components/sectionTitle'
 import SectionSubTitle from '../components/sectionSubTitle'
+import Point from '../components/processItemPoint'
 
 const Boards = () => (
   <Section id="boards">
     <SectionIntro>
       <SectionTitle>Boards</SectionTitle>
 
-      <SectionSubTitle>Shaping an Effective, Cohesive Team Built for Today</SectionSubTitle>
+      <SectionSubTitle>
+        Shaping an Effective, Cohesive Team Built for Today
+      </SectionSubTitle>
       <Description>
         A high-functioning board – with the right members united in vision –
         positions an organization for healthy growth while maximizing value,
@@ -32,62 +35,62 @@ const Boards = () => (
         <ProcessItem>
           <ProcessItemTitle>Understand the Scope</ProcessItemTitle>
           <ProcessItemList>
-            <ProcessItemPoint>
+            <Point>
               Analyze overall performance, capabilities and core issues.
-            </ProcessItemPoint>
-            <ProcessItemPoint>
+            </Point>
+            <Point>
               Assess current and emerging needs with precision.
-            </ProcessItemPoint>
-            <ProcessItemPoint>
+            </Point>
+            <Point>
               Identify specific actions needed to effect change or enhance
               impact.
-            </ProcessItemPoint>
+            </Point>
           </ProcessItemList>
         </ProcessItem>
 
         <ProcessItem>
           <ProcessItemTitle>Uncover Opportunities</ProcessItemTitle>
           <ProcessItemList>
-            <ProcessItemPoint>
+            <Point>
               Assess Board and individual director competencies, motivations and
               potential.
-            </ProcessItemPoint>
-            <ProcessItemPoint>
+            </Point>
+            <Point>
               Collaborate on ways to enhance contributions.
-            </ProcessItemPoint>
-            <ProcessItemPoint>
+            </Point>
+            <Point>
               Facilitate change through practical ideas, coaching, meetings and
               workshops.
-            </ProcessItemPoint>
+            </Point>
           </ProcessItemList>
         </ProcessItem>
 
         <ProcessItem>
           <ProcessItemTitle>Commit to Measurable Objectives</ProcessItemTitle>
           <ProcessItemList>
-            <ProcessItemPoint>
+            <Point>
               Validate priorities and establish a roadmap for change.
-            </ProcessItemPoint>
-            <ProcessItemPoint>
+            </Point>
+            <Point>
               Align objectives, strategies and tactics to corporate vision and
               goals.
-            </ProcessItemPoint>
-            <ProcessItemPoint>
+            </Point>
+            <Point>
               Develop benchmarks for process and outcomes.
-            </ProcessItemPoint>
+            </Point>
           </ProcessItemList>
         </ProcessItem>
 
         <ProcessItem>
           <ProcessItemTitle>Evaluate Results</ProcessItemTitle>
           <ProcessItemList>
-            <ProcessItemPoint>
+            <Point>
               Assess progress at one-year mark.
-            </ProcessItemPoint>
-            <ProcessItemPoint>Explore unforeseen challenges.</ProcessItemPoint>
-            <ProcessItemPoint>
+            </Point>
+            <Point>Explore unforeseen challenges.</Point>
+            <Point>
               Iterate and revise strategies for the upcoming year.
-            </ProcessItemPoint>
+            </Point>
           </ProcessItemList>
         </ProcessItem>
       </Process>
@@ -238,15 +241,16 @@ const ProcessItemTitle = styled.h4`
 const ProcessItemList = styled.ul`
   position: relative;
   list-style-type: none;
+  background-image: linear-gradient(
+    to bottom,
+    var(--blue-700),
+    var(--blue-700) 100%
+  );
+  background-size: 1px 67%;
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
 `
 
-const ProcessItemPoint = styled.li`
-  font-size: 1.8rem;
-
-  &:not(:last-child) {
-    margin-bottom: 1.6rem;
-  }
-`
 
 const ProcessSummary = styled.div`
   position: relative;
