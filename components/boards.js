@@ -1,7 +1,16 @@
 import styled from 'styled-components'
 import SectionTitle from '../components/sectionTitle'
 import SectionSubTitle from '../components/sectionSubTitle'
-import Point from '../components/processItemPoint'
+import {
+  ProcessWrap,
+  ProcessTitle,
+  Process,
+  ProcessItem,
+  ProcessItemPoint,
+  ProcessItemTitle,
+  ProcessItemList,
+  ProcessSummary,
+} from '../components/process'
 
 const Boards = () => (
   <Section id="boards">
@@ -35,62 +44,62 @@ const Boards = () => (
         <ProcessItem>
           <ProcessItemTitle>Understand the Scope</ProcessItemTitle>
           <ProcessItemList>
-            <Point>
+            <ProcessItemPoint>
               Analyze overall performance, capabilities and core issues.
-            </Point>
-            <Point>
+            </ProcessItemPoint>
+            <ProcessItemPoint>
               Assess current and emerging needs with precision.
-            </Point>
-            <Point>
+            </ProcessItemPoint>
+            <ProcessItemPoint>
               Identify specific actions needed to effect change or enhance
               impact.
-            </Point>
+            </ProcessItemPoint>
           </ProcessItemList>
         </ProcessItem>
 
         <ProcessItem>
           <ProcessItemTitle>Uncover Opportunities</ProcessItemTitle>
           <ProcessItemList>
-            <Point>
+            <ProcessItemPoint>
               Assess Board and individual director competencies, motivations and
               potential.
-            </Point>
-            <Point>
+            </ProcessItemPoint>
+            <ProcessItemPoint>
               Collaborate on ways to enhance contributions.
-            </Point>
-            <Point>
+            </ProcessItemPoint>
+            <ProcessItemPoint>
               Facilitate change through practical ideas, coaching, meetings and
               workshops.
-            </Point>
+            </ProcessItemPoint>
           </ProcessItemList>
         </ProcessItem>
 
         <ProcessItem>
           <ProcessItemTitle>Commit to Measurable Objectives</ProcessItemTitle>
           <ProcessItemList>
-            <Point>
+            <ProcessItemPoint>
               Validate priorities and establish a roadmap for change.
-            </Point>
-            <Point>
+            </ProcessItemPoint>
+            <ProcessItemPoint>
               Align objectives, strategies and tactics to corporate vision and
               goals.
-            </Point>
-            <Point>
+            </ProcessItemPoint>
+            <ProcessItemPoint>
               Develop benchmarks for process and outcomes.
-            </Point>
+            </ProcessItemPoint>
           </ProcessItemList>
         </ProcessItem>
 
         <ProcessItem>
           <ProcessItemTitle>Evaluate Results</ProcessItemTitle>
           <ProcessItemList>
-            <Point>
+            <ProcessItemPoint>
               Assess progress at one-year mark.
-            </Point>
-            <Point>Explore unforeseen challenges.</Point>
-            <Point>
+            </ProcessItemPoint>
+            <ProcessItemPoint>Explore unforeseen challenges.</ProcessItemPoint>
+            <ProcessItemPoint>
               Iterate and revise strategies for the upcoming year.
-            </Point>
+            </ProcessItemPoint>
           </ProcessItemList>
         </ProcessItem>
       </Process>
@@ -132,152 +141,6 @@ const Description = styled.div`
   @media (min-width: ${(props) => props.theme.screen.lg}) {
     max-width: 60%;
     font-size: 2.4rem;
-  }
-`
-
-const ProcessWrap = styled.div`
-  padding: 0 2rem;
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    padding: 0 4rem;
-  }
-
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
-    padding: 0 8rem;
-    display: grid;
-    grid-template-columns: minmax(30%, 64%) 1fr;
-  }
-`
-
-const ProcessTitle = styled.h3`
-  margin-bottom: 2rem;
-  font-size: 3.6rem;
-  line-height: 1;
-  color: var(--grey-600);
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-  }
-
-  svg {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 5px;
-    margin-right: 2rem;
-    fill: var(--blue-700);
-  }
-`
-
-const Process = styled.div`
-  margin-bottom: 4rem;
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    grid-column: 1 / span 1;
-  }
-`
-
-const ProcessItem = styled.div`
-  position: relative;
-  padding: 6rem 4rem 6rem 0;
-  border-bottom: 1px solid var(--grey-300);
-
-  &:before {
-    position: absolute;
-    right: 0;
-    top: 2rem;
-    font-size: 10rem;
-    font-weight: 400;
-    line-height: 120px;
-    font-family: var(--serif);
-    color: var(--grey-200);
-  }
-
-  &:nth-child(1):before {
-    content: '1.';
-  }
-
-  &:nth-child(2):before {
-    content: '2.';
-  }
-
-  &:nth-child(3):before {
-    content: '3.';
-  }
-
-  &:nth-child(4):before {
-    content: '4.';
-  }
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    padding: 6rem 10rem 6rem 0;
-
-    &:before {
-      right: 2rem;
-      font-size: 14rem;
-    }
-  }
-
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-`
-
-const ProcessItemTitle = styled.h4`
-  margin-bottom: 3rem;
-  font-size: 2.4rem;
-  line-height: 1;
-  font-family: var(--serif);
-  color: var(--grey-600);
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    font-size: 3.2rem;
-  }
-`
-
-const ProcessItemList = styled.ul`
-  position: relative;
-  list-style-type: none;
-  background-image: linear-gradient(
-    to bottom,
-    var(--blue-700),
-    var(--blue-700) 100%
-  );
-  background-size: 1px 67%;
-  background-repeat: no-repeat;
-  background-position: 5px 50%;
-`
-
-
-const ProcessSummary = styled.div`
-  position: relative;
-  padding: 0 0 4rem;
-  font-size: 2rem;
-  line-height: 1.75;
-  font-family: var(--serif);
-  color: var(--grey-700);
-
-  p {
-    margin-bottom: 3rem;
-  }
-
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
-    grid-column: 2 / span 1;
-    padding: 6rem 4rem 6rem 6rem;
-    border-left: 1px solid var(--grey-300);
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 6rem;
-      width: 6rem;
-      height: 4px;
-      background-color: var(--blue-500);
-    }
   }
 `
 
