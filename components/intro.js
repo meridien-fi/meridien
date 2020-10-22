@@ -2,30 +2,28 @@ import styled, { keyframes } from 'styled-components'
 
 const Intro = () => (
   <Section id="intro">
-    <Container>
-      <TitleWrap>
-        <Title>
-          <LineOne>Strategic </LineOne>
-          <LineTwo>Leadership </LineTwo>
-          <LineThree>Advisory</LineThree>
-        </Title>
-        <SubTitle>
-          Personalized Insights for <strong>Boards</strong>,
-          <strong>CEOs</strong> and <strong>Top Talent</strong>
-        </SubTitle>
-      </TitleWrap>
-      <Image>
-        <picture>
-          <source srcSet="/images/peter-stephenson.webp" type="image/webp" />
-          <img
-            src="/images/peter-stephenson.jpg"
-            width="900"
-            height="573"
-            alt="Peter Stephenson"
-          />
-        </picture>
-      </Image>
-    </Container>
+    <TitleWrap>
+      <Title>
+        <LineOne>Strategic </LineOne>
+        <LineTwo>Leadership </LineTwo>
+        <LineThree>Advisory</LineThree>
+      </Title>
+      <SubTitle>
+        Personalized Insights for <strong>Boards</strong>,<strong>CEOs</strong>{' '}
+        and <strong>Top Talent</strong>
+      </SubTitle>
+    </TitleWrap>
+    <Image>
+      <picture>
+        <source srcSet="/images/peter-stephenson.webp" type="image/webp" />
+        <img
+          src="/images/peter-stephenson.jpg"
+          width="900"
+          height="573"
+          alt="Peter Stephenson"
+        />
+      </picture>
+    </Image>
   </Section>
 )
 
@@ -43,29 +41,24 @@ const fadeIn = keyframes`
 `
 
 const Section = styled.section`
+  position: relative;
   background-color: var(--beige-100);
-  padding: 0 2rem;
 
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    padding: 0 0 0 4rem;
-  }
-
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
-    padding: 0 0 0 8rem;
-  }
-`
-
-const Container = styled.div`
   @media (min-width: ${(props) => props.theme.screen.md}) {
     display: grid;
-    grid-template-columns: minmax(30%, 42%) minmax(40%, 58%);
+    grid-template-columns: minmax(30%, 45%) minmax(40%, 55%);
   }
 `
 const TitleWrap = styled.div`
-  padding: 1rem 0 0 0;
+  padding: 1rem 0 0 2rem;
+  z-index: 1;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    padding: 6rem 0 8rem 0;
+    padding: 6rem 0 8rem 4rem;
+  }
+
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    padding-left: 8rem;
   }
 `
 const Title = styled.h1`
@@ -81,7 +74,8 @@ const Title = styled.h1`
   }
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
-    font-size: 7.5vw;
+    font-size: 12rem;
+    font-size: min(max(8rem, 7.5vw), 12rem);
   }
 `
 
