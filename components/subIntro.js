@@ -14,8 +14,9 @@ const SubIntro = () => (
       <Dash />
       <p>
         <strong>Dr. Peter Stephenson</strong> joins{' '}
-        <a href="https://www.hugessen.com">Hugessen Consulting</a> to boost CEO
-        leadership performance and help Boards raise their performance bar.
+        <a href="https://www.hugessen.com">Hugessen Consulting</a> <br /> to
+        boost CEO leadership performance and help Boards raise their performance
+        bar.
       </p>
     </Description>
   </Section>
@@ -59,7 +60,7 @@ const Title = styled.h2`
 `
 
 const SubTitle = styled.div`
-  font-size: 2rem;
+  font-size: 2.2rem;
 
   @media (min-width: ${(props) => props.theme.screen.md}) {
     font-size: 2.4rem;
@@ -67,11 +68,7 @@ const SubTitle = styled.div`
 `
 
 const Description = styled.div`
-  font-size: 2rem;
-
-  @media (min-width: ${(props) => props.theme.screen.md}) {
-    font-size: 2.2rem;
-  }
+  font-size: 2.2rem;
 
   strong {
     font-weight: 400;
@@ -80,23 +77,23 @@ const Description = styled.div`
   a {
     position: relative;
     white-space: nowrap;
-    padding: 0 0 0.25rem;
     font-weight: 400;
     color: var(--blue-900);
-    transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
 
     &:after {
-      --scale: 0;
       content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 100%;
-      height: 1px;
-      background: var(--blue-700);
-      transform: scaleX(var(--scale));
-      transform-origin: var(--x) 50%;
-      transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
+      position: relative;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      top: 1.3rem;
+      left: 0.25rem;
+      border-style: solid;
+      border-color: var(--blue-900);
+      border-width: 2px 2px 0 0;
+      transform: rotate(45deg);
+      vertical-align: top;
+      transition: all 0.2s;
     }
 
     &:hover,
@@ -106,7 +103,8 @@ const Description = styled.div`
     }
 
     &:hover:after {
-      --scale: 1;
+      left: 0.6rem;
+      border-color: var(--blue-500);
     }
   }
 `
