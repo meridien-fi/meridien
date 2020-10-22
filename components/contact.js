@@ -7,9 +7,7 @@ const Contact = () => (
       <ContactInfo>
         <SectionTitle>Contact</SectionTitle>
 
-        <SubTitle>
-          Dr. Peter Stephenson
-        </SubTitle>
+        <SubTitle>Dr. Peter Stephenson</SubTitle>
 
         <ContactDetails>
           <Phone>
@@ -29,7 +27,7 @@ const Contact = () => (
                 transform="translate(1 1)"
               />
             </svg>
-            416-972-0782
+            <a href="tel:416-972-0782">416-972-0782</a>
           </Phone>
 
           <Email>
@@ -82,7 +80,7 @@ const Section = styled.div`
 `
 
 const SubTitle = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: 2.4rem;
   font-weight: 600;
   color: var(--grey-600);
@@ -128,17 +126,27 @@ const Phone = styled.div`
     margin-right: 2rem;
     stroke: var(--blue-700);
   }
+
+  a {
+    color: var(--grey-700);
+  }
+
+  @media (min-width: ${(props) => props.theme.screen.md}) {
+    font-size: 3rem;
+  }
 `
 
 const Email = styled.div`
-  margin-bottom: 2rem;
   font-size: 2.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   svg {
     width: 32px;
     height: 32px;
     position: relative;
-    top: 6px;
+    top: 8px;
     margin-right: 2rem;
     stroke: var(--blue-700);
   }
@@ -150,7 +158,8 @@ const Email = styled.div`
       color: var(--blue-700);
     }
   }
-  @media (min-width: ${(props) => props.theme.screen.lg}) {
+
+  @media (min-width: ${(props) => props.theme.screen.md}) {
     font-size: 3rem;
   }
 `
