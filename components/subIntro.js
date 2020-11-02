@@ -14,7 +14,7 @@ const SubIntro = () => (
       <Dash />
       <p>
         <strong>Dr. Peter Stephenson</strong> joins{' '}
-        <a href="https://www.hugessen.com">Hugessen Consulting</a> <br /> to
+        <a href="https://www.hugessen.com" target="_blank">Hugessen Consulting</a> <br /> to
         boost CEO leadership performance and help Boards raise their performance
         bar.
       </p>
