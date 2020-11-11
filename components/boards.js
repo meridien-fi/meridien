@@ -20,8 +20,7 @@ const Boards = () => (
       description={
         'A high-functioning board – with the right members united in vision – positions an organization for healthy growth while maximizing value, managing risk and staying resilient in times of change.'
       }
-    ></SectionIntro>
-
+    />
     <ProcessWrap>
       <ProcessTitle />
       <Process>

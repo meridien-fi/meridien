@@ -20,8 +20,7 @@ const TopTalent = () => (
       description={
         'Attracting and developing high performers – your competitive advantage – takes planning, coaching and a proven process.'
       }
-    ></SectionIntro>
-
+    />
     <ProcessWrap>
       <ProcessTitle />
       <Process>
