@@ -3,9 +3,7 @@ import styled from 'styled-components'
 const Cta = () => (
   <Section>
     <Container>
-      <Title>
-        Can your leadership teams do more to position themselves for success?
-      </Title>
+      <Title>Are your board and leadership teams creating maximum value?</Title>
 
       <SubTitle>Let Peter help you reset and achieve your potential</SubTitle>
       <Dash />
@@ -27,7 +25,7 @@ const Container = styled.div`
   text-align: center;
 `
 
-const Title = styled.div`
+const Title = styled.h2`
   margin-bottom: 4rem;
   font-size: 3rem;
   line-height: 1.25;
