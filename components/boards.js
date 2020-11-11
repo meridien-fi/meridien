@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-// import SectionIntro from '../components/sectionIntro'
+import SectionIntro from '../components/sectionIntro'
 import ProcessTitle from '../components/processTitle'
 import ProcessItems from '../components/processBoardsData'
 import {
@@ -14,13 +14,13 @@ import {
 
 const Boards = () => (
   <Section id="boards">
-    {/* <SectionIntro
+    <SectionIntro
       title={'Boards'}
       subtitle={'Shaping an Effective, Cohesive Team Built for Tomorrow'}
       description={
         'A high-functioning board – with the right members united in vision – positions an organization for healthy growth while maximizing value, managing risk and staying resilient in times of change.'
       }
-    /> */}
+    />
     <ProcessWrap>
       <ProcessTitle />
       <Process>
